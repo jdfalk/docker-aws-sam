@@ -1,7 +1,7 @@
-from docker:24
+FROM docker:24
 
-run apk upgrade --no-cache
-run apk add --update python3 py-pip python3-dev build-base libffi-dev \
+RUN apk upgrade --no-cache
+RUN apk add --update python3 py-pip python3-dev build-base libffi-dev \
   && pip install --upgrade pip --break-system-packages \
   && pip install awscli aws-sam-cli --break-system-packages
 
